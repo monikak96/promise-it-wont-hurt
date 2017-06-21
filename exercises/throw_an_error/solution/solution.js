@@ -5,10 +5,10 @@ function parsePromised (json) {
     try {
       fulfill(JSON.parse(json));
     } catch (e) {
-      reject(e);
+      reject(e);//would it print if there is an error??
     }
   });
 };
 
 parsePromised(process.argv[2])
-.then(null, console.log)
+.then(console.log,null)
